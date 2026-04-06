@@ -2,6 +2,12 @@
 
 Qwen-расширение для стандартизированной документации Python-модулей в стиле Сбера.
 
+## Публичные ссылки
+
+1. Репозиторий extension: [https://github.com/travinov/qwen-sber-doc-extension](https://github.com/travinov/qwen-sber-doc-extension)
+2. Репозиторий MCP server: [https://github.com/travinov/qwen-sber-doc-mcp](https://github.com/travinov/qwen-sber-doc-mcp)
+3. Форк с результатом по челленджу: [https://github.com/travinov/claw-code](https://github.com/travinov/claw-code)
+
 ## Зачем устанавливать это решение
 
 Расширение закрывает практическую проблему командной документации:
@@ -63,8 +69,8 @@ workspace/
 Шаги:
 
 ```bash
-git clone <EXTENSION_REPO_URL> qwen-sber-doc-extension
-git clone <MCP_REPO_URL> qwen-sber-doc-mcp
+git clone https://github.com/travinov/qwen-sber-doc-extension.git qwen-sber-doc-extension
+git clone https://github.com/travinov/qwen-sber-doc-mcp.git qwen-sber-doc-mcp
 
 cd qwen-sber-doc-mcp
 npm install
