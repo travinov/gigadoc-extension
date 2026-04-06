@@ -7,6 +7,7 @@ Qwen-расширение для стандартизированной доку
 1. Репозиторий extension: [https://github.com/travinov/qwen-sber-doc-extension](https://github.com/travinov/qwen-sber-doc-extension)
 2. Репозиторий MCP server: [https://github.com/travinov/qwen-sber-doc-mcp](https://github.com/travinov/qwen-sber-doc-mcp)
 3. Форк с результатом по челленджу: [https://github.com/travinov/claw-code](https://github.com/travinov/claw-code)
+4. Релиз extension `v0.1.0`: [https://github.com/travinov/qwen-sber-doc-extension/releases/tag/v0.1.0](https://github.com/travinov/qwen-sber-doc-extension/releases/tag/v0.1.0)
 
 ## Зачем устанавливать это решение
 
@@ -78,6 +79,12 @@ npm run build
 
 cd ../qwen-sber-doc-extension
 qwen extensions link .
+```
+
+Быстрая установка extension без клонирования:
+
+```bash
+qwen extensions install travinov/qwen-sber-doc-extension
 ```
 
 Если extension и MCP лежат не рядом, укажите явный путь:
