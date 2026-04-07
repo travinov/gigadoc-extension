@@ -1,0 +1,17 @@
+{
+  "name": "qwen-sber-doc-extension",
+  "version": "0.2.0",
+  "contextFileName": "QWEN.md",
+  "commands": "commands",
+  "skills": "skills",
+  "mcpServers": {
+    "sber-doc-mcp": {
+      "command": "node",
+      "args": [
+        "${extensionPath}${/}scripts${/}run-mcp.js"
+      ],
+      "cwd": "${extensionPath}",
+      "timeout": 15000
+    }
+  }
+}

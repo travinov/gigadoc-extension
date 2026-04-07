@@ -35,6 +35,7 @@ Qwen-расширение для стандартизированной доку
 Назначение: описывает правила и порядок использования инструментов.
 4. Manifest: `qwen-extension.json`
 Назначение: подключает skill, command и MCP server.
+Дополнительно: `gigacode-extension.json` для форков, где CLI ожидает такой файл конфигурации.
 5. Launcher: `scripts/run-mcp.js`
 Назначение: находит и запускает companion MCP server.
 
