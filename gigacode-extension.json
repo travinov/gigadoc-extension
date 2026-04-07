@@ -1,6 +1,6 @@
 {
   "name": "gigadoc-extension",
   "description": "Sber-style RU documentation workflow for Python files and project directories.",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "contextFileName": "GEMINI.md"
 }

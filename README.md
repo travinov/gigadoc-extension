@@ -8,6 +8,11 @@
 2. MCP repo: [https://github.com/travinov/gigadoc-mcp](https://github.com/travinov/gigadoc-mcp)
 3. MCP npm: [https://www.npmjs.com/package/gigadoc-mcp](https://www.npmjs.com/package/gigadoc-mcp)
 
+## Актуальные версии
+
+1. `gigadoc-extension`: `0.4.2`
+2. `gigadoc-mcp`: `0.4.3`
+
 ## Что делает extension
 
 1. Добавляет команды `/doc:sber` и `/sber`.
@@ -48,7 +53,7 @@ gigacode extensions link /absolute/path/to/gigadoc-extension
   "mcpServers": {
     "gigadoc-mcp": {
       "command": "npx",
-      "args": ["--yes", "gigadoc-mcp"],
+      "args": ["--yes", "gigadoc-mcp@0.4.3"],
       "timeout": 60000
     }
   }
@@ -64,7 +69,7 @@ gigacode extensions link /absolute/path/to/gigadoc-extension
   "mcpServers": {
     "gigadoc-mcp": {
       "command": "npx",
-      "args": ["--yes", "gigadoc-mcp"],
+      "args": ["--yes", "gigadoc-mcp@0.4.3"],
       "env": {
         "NPM_CONFIG_STRICT_SSL": "false"
       },
@@ -88,7 +93,7 @@ gigacode extensions link /absolute/path/to/gigadoc-extension
       "args": [
         "/absolute/path/to/npm/bin/npx-cli.js",
         "--yes",
-        "gigadoc-mcp"
+        "gigadoc-mcp@0.4.3"
       ],
       "env": {
         "PATH": "/absolute/path/to/node/bin:/usr/bin:/bin:/usr/sbin:/sbin"
@@ -133,6 +138,38 @@ gigacode extensions link /absolute/path/to/gigadoc-extension
 2. Детализация: документируйте приоритетные модули отдельными вызовами по конкретным файлам.
 
 Команды `/doc:sber` и `/sber` уже ориентированы на этот режим для директорий.
+
+## Настройка под себя
+
+### Уровень 1: без форка
+
+Добавляйте стиль в запрос перед командой:
+
+```text
+Пиши проще, короткими абзацами, для junior-аудитории. Добавляй мини-итоги после разделов.
+/doc:sber /path/to/module.py
+```
+
+### Уровень 2: правила на уровне проекта
+
+Создайте или дополните `QWEN.md`/`GEMINI.md` в проекте:
+
+1. фиксируйте тон (строже, проще, короче);
+2. фиксируйте обязательные разделы;
+3. фиксируйте ограничения по длине и формату таблиц.
+
+### Уровень 3: полный контроль через форк
+
+1. Форкните `gigadoc-extension`.
+2. Измените:
+   - `skills/sber-doc-style/SKILL.md`
+   - `commands/doc/sber.md`
+   - `commands/sber.md`
+3. Подключите свой форк:
+
+```text
+/extensions install https://github.com/<your-user>/<your-repo>.git
+```
 
 ## Использование
 
