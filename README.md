@@ -35,7 +35,12 @@ Qwen-расширение для стандартизированной доку
 Назначение: описывает правила и порядок использования инструментов.
 4. Manifest: `qwen-extension.json`
 Назначение: подключает skill, command и MCP server.
-Дополнительно: `gigacode-extension.json` для форков, где CLI ожидает такой файл конфигурации.
+Дополнительно:
+- `gigacode-extension.json` для форков, где CLI ожидает такой файл конфигурации.
+- `gemini-extension.json` для Gemini-совместимых форков.
+Контекстные файлы:
+- `QWEN.md` для Qwen-ветки;
+- `GEMINI.md` для Gigacode/Gemini-ветки.
 5. Launcher: `scripts/run-mcp.js`
 Назначение: находит и запускает companion MCP server.
 
@@ -126,6 +131,8 @@ export QWEN_SBER_DOC_MCP_ENTRY="/absolute/path/to/qwen-sber-doc-mcp/dist/src/ind
 
 ```text
 /doc:sber /repo/src/query_engine.py
+# или, если форк регистрирует только плоские команды:
+/sber /repo/src/query_engine.py
 ```
 
 2. Обзор проекта по директории:
